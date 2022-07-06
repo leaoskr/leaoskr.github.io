@@ -1,0 +1,383 @@
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans:wght@300;400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Rock+Salt&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Long+Cang&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Lato:300,400|Poppins:300,400,800&display=swap');
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html{
+    font-size: 10px;
+    font-family: 'Work Sans', sans-serif;
+    scroll-behavior: smooth;
+}
+
+.container{
+    min-height: 100vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.brand h1{
+    font-size: 3rem;
+    text-transform: uppercase;
+    color: black;
+}
+
+.brand h1 span{
+    color: #ffda00;
+}
+
+/* Header Section */
+#header {
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100vw;
+    height: auto;
+}
+
+#header .header {
+    min-height: 8vh;
+    background-color: lightyellow;
+}
+
+#header .nav-bar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    height: 100%;
+    /* max-width: 1300px; */
+    padding: 0 20px;
+}
+
+#header .nav-list ul{
+    list-style: none;
+    position: absolute;
+    background-color: lightyellow;
+    width: 100vw;
+    height: 100vh;
+    left: 100%;
+    top: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+    overflow: hidden;
+    transition: .5s ease left;
+}
+
+#header .nav-list ul.active{
+    left:0
+}
+
+#header .nav-list ul a {
+    font-size: 2.5rem;
+    color: black;
+    text-transform: uppercase;
+    padding: 20px;
+    display: block;
+}
+
+#header .nav-list ul a::after{
+    content: attr(data-after);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%) scale(0);
+    font-size: 13rem;
+    letter-spacing: 50px;
+    color: #e6e3d4;
+    opacity: .3;
+    z-index: -1;
+}
+
+#header .nav-list ul li:hover a::after{
+    transform: translate(-50%,-50%) scale(.8);
+    letter-spacing: initial;
+}
+
+#header .nav-list ul li a{
+    transition: .3s ease;
+}
+#header .nav-list ul li:hover a[name=home]{
+    background-color: lightblue;
+}
+#header .nav-list ul li:hover a[name=portfolio]{
+    background-color: lightgreen;
+}
+#header .nav-list ul li:hover a[name=about]{
+    background-color: pink;
+}
+
+#header .hamburger{
+    height: 60px;
+    width: 60px;
+    display: inline-block;
+    border: 3px solid black;
+    border-radius: 50%;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 100;
+    cursor: pointer;
+    transform: scale(.5);
+    margin-right: 20px;
+}
+
+#header .hamburger .bar{
+    height: 2px;
+    width: 30px;
+    position: relative;
+    background-color: black;
+    z-index: -1;
+}
+
+#header .hamburger .bar::after,#header .hamburger .bar::before {
+    content: "";
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    left: 0;
+    background-color: black;
+    transition: .3s ease;
+    transition-property: top, bottom;
+}
+
+#header .hamburger .bar::after{
+    top: 8px;
+}
+
+#header .hamburger .bar::before{
+    bottom: 8px;
+}
+
+#header .hamburger.active .bar::before{
+    bottom: 0;
+}
+#header .hamburger.active .bar::after{
+    top: 0;
+}
+/* End Header Section */
+
+/* Home Section */
+#home {
+    background-image: url(./images/home-bg.jpg);
+    background-size: cover;
+    background-position: top center;
+    position: relative;
+    z-index: 1;
+}
+
+#home::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    background-color: black;
+    opacity: .7;
+    z-index: -1;
+}
+
+#home .home{
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 50px;
+    justify-content: flex-start;
+}
+
+#home h1:nth-child(3) {
+    font-family: 'Rock Salt', cursive;
+}
+
+#home h1{
+    display: block;
+    width:fit-content;
+    /* font-family: 'Rock Salt', cursive; */
+    font-size: 4rem;
+    position: relative;
+    color: transparent;
+    animation: text_reveal .5s ease forwards;
+    animation-delay: s;
+}
+
+#home h1:nth-child(1) {
+    animation-delay: 1s;
+}
+#home h1:nth-child(2) {
+    animation-delay: 2s;
+}
+#home h1:nth-child(3) {
+    animation: text_reveal_name .5s ease forwards;
+    animation-delay: 3s;
+}
+
+#home h1 span {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 0;
+    background-color: yellow;
+    animation: text_reveal_box 1s ease;
+    animation-delay: .5s;
+}
+
+#home h1:nth-child(1) span {
+    animation-delay: .5s;
+}
+#home h1:nth-child(2) span {
+    animation-delay: 1.5s;
+}
+#home h1:nth-child(3) span {
+    animation-delay: 2.5s;
+}
+
+#home .cta {
+    /* font-family: 'Rock Salt', cursive; */
+    display: inline-block;
+    padding: 10px 30px;
+    color: white;
+    background-color: transparent;
+    border: 2px solid yellow;
+    font-size: 2rem;
+    text-transform: uppercase;
+    letter-spacing: .1rem;
+    margin-top: 30px;
+    transition: .3s ease;
+    transition-property: background-color, color;
+}
+
+#home .cta:hover {
+    color: black;
+    background-color: yellow;
+
+}
+/* End Home Section */
+
+/* Footer Section */
+#footer {
+    background-color: lightyellow;
+}
+
+#footer .footer{
+    min-height: 200px;
+    flex-direction: column;
+    padding-top: 50px;
+    padding-bottom: 10px;
+}
+
+#footer h2 {
+    color: black;
+    font-size: 1.5rem;
+    margin-top: 6px;
+    margin-bottom: 6px;
+}
+
+#footer .social-icon {
+    display: flex;
+    margin-bottom: 30px;
+}
+
+#footer .social-item img {
+    height: 50px;
+    width: 50px;
+    margin: 0 5px;
+    transition: .5s ease;
+}
+
+#footer .social-item[name=github]:hover img{
+    background-color: yellow;
+}
+#footer .social-item[name=linkedin]:hover img{
+    background-color: lightblue;
+}
+#footer .social-item[name=email]:hover img{
+    background-color: lightgreen;
+}
+#footer .social-item[name=instagram]:hover img{
+    background-color: pink;
+}
+
+/* End Footer Section */
+
+/* Keyframes */
+@keyframes text_reveal_box {
+    50% {
+        width: 100%;
+        left: 0;
+    }
+    100% {
+        width: 0;
+        left: 100%;
+    }
+}
+
+@keyframes text_reveal {
+    100% {
+        color:white
+    }
+}
+
+@keyframes text_reveal_name {
+    100% {
+        color:#ffff00;
+        /* font-weight: 500; */
+    }
+}
+
+/* End Keyframes */
+
+/* Media Query For Tablet */
+@media only screen and (min-width:768px){
+    .cta {
+        font-size: 2.5rem;
+        padding: 20px 60px;
+    }
+    /* h1.section-title{
+        font-size: 7rem;
+    } */
+
+    /* home */
+    #home h1{
+        font-size: 6rem;
+    }
+    /* end home */
+}
+/* End Media Query For Tablet */
+
+/* Media Query For Desktop */
+@media only screen and (min-width:1200px){
+    /* header */
+    #header .hamburger {
+        display: none;
+    }
+    #header .nav-list ul li {
+        display: inline-block;
+    }
+    #header .nav-list ul li a {
+        font-size: 1.8rem;
+    }
+    #header .nav-list ul {
+        position: initial;
+        display: block;
+        height: auto;
+        width: fit-content;
+        background-color: transparent;
+    }
+    #header .nav-list ul a::after {
+        display: none;
+    }
+    /* end header */
+}
+/* End Media Query For Desktop */
