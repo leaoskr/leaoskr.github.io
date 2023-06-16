@@ -1,0 +1,108 @@
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans:wght@300;400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Rock+Salt&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Long+Cang&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Lato:300,400|Poppins:300,400,800&display=swap');
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html{
+    font-size: 10px;
+    font-family: 'Work Sans', sans-serif;
+    scroll-behavior: smooth;
+}
+
+.container{
+    min-height: 100vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+p{
+    color: black;
+    font-size: 1.8rem;
+    margin-top: 5px;
+    line-height: 2.5rem;
+    font-weight: 300;
+    letter-spacing: 0.05rem;
+}
+
+/* About Me Section */
+#aboutme .aboutme{
+    flex-direction: column;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 100px;
+}
+
+#aboutme .aboutme-content{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+#aboutme .aboutme-image{
+    align-items: center;
+    padding-top: 80px;
+    padding-bottom: 20px;
+    width: 55%;
+}
+
+#aboutme .aboutme-image img{
+    border-radius: 10px;
+}
+
+#aboutme .aboutme-info{
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+#aboutme .aboutme-info h1{
+    font-size: 4rem;
+    font-weight: 500;
+    padding-bottom: 20px;
+    font-family: 'Rock Salt', cursive;
+}
+
+#aboutme .aboutme-info h1 span{
+    color: #f9e076;
+}
+
+#aboutme .aboutme-info h2{
+    font-size: 2.5rem;
+    font-weight: 500;
+    margin-top: 10px;
+    padding-bottom: 10px;
+}
+
+#aboutme .aboutme-info .cta{
+    /* font-family: 'Rock Salt', cursive; */
+    display: inline-block;
+    padding: 10px 30px;
+    color:black;
+    background-color: transparent;
+    border: 2px solid #dcd7a0;
+    font-size: 2rem;
+    text-transform: uppercase;
+    letter-spacing: .1rem;
+    margin-top: 30px;
+    transition: .3s ease;
+    transition-property: background-color, color;
+    flex-direction: column;
+    margin-right: 30px;
+}
+
+#aboutme .aboutme-info .cta:hover {
+    color: black;
+    background-color: #dcd7a0;
+
+}
+/* End About Me Section */
