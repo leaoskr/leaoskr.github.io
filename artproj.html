@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+    <!-- <link rel="stylesheet" href="artprojstyle.css"> -->
+    <link rel="stylesheet" href="artprojstyle.css">
     <title>Art - YuQian Shi</title>
 </head>
 <body>
@@ -28,11 +30,65 @@
     <!-- End Header Section -->
 
     <!-- Showcase Section -->
-    <section id="projectThumbs">
-        <div class="projectThumbs container">
 
+    <div class="filterTab">
+        <div id="myBtnContainer">
+            <button class="btn active" onclick="filterSelection('all')"> Show all</button>
+            <button class="btn" onclick="filterSelection('twoDim')"> 2D</button>
+            <button class="btn" onclick="filterSelection('threeDim')"> 3D</button>
         </div>
-    </section>
+    </div>
+    
+
+    <div class="main container">
+        <!-- Portfolio Gallery Grid -->
+        <div class="row">
+          <div class="column twoDim">
+            <div class="content">
+              <img src="./images/img-1.jpg" alt="Mountains" style="width:100%">
+              <a href="./projects/project1.html"><h4>Title</h4></a>
+              <p>Painting</p>
+            </div>
+          </div>
+          <div class="column twoDim">
+            <div class="content">
+            <img src="./images/img-2.jpg" alt="Lights" style="width:100%">
+                <a href="./projects/project1.html"><h4>Title</h4></a>
+                <p>Animation</p>
+            </div>
+          </div>
+          <div class="column twoDim">
+            <div class="content">
+            <img src="./images/img-3.jpg" alt="Nature" style="width:100%">
+              <a href="./projects/project1.html"><h4>Title</h4></a>
+              <p>Game</p>
+            </div>
+          </div>
+          <div class="column twoDim">
+            <div class="content">
+            <img src="./images/img-6.jpg" alt="Nature" style="width:100%">
+              <a href="./projects/project1.html"><h4>Title</h4></a>
+              <p>Font Design</p>
+            </div>
+          </div>
+          
+          <div class="column threeDim">
+            <div class="content">
+              <img src="./images/img-4.jpg" alt="Car" style="width:100%">
+              <a href="./projects/project1.html"><h4>Title</h4></a>
+              <p>Pottery</p>
+            </div>
+          </div>
+          <div class="column threeDim">
+            <div class="content">
+            <img src="./images/img-5.jpg" alt="Car" style="width:100%">
+              <a href="./projects/project1.html"><h4>Title</h4></a>
+              <p>Mixed Media</p>
+            </div>
+          </div>
+        <!-- END GRID -->
+        </div>
+    </div>
     <!-- End Showcase Section -->
     
     <!-- Footer Section -->
@@ -61,5 +117,7 @@
     </section>
     <!-- End Footer Section -->
     <script src="./app.js"></script>
+    <!-- <script src="./galleryfilter.js"></script> -->
+    <script src="./galleryfilter.js"></script>
 </body>
 </html>
