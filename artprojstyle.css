@@ -27,6 +27,11 @@ a:visited { text-decoration: none; color: black;}
 a:hover { text-decoration: underline; color: #404132;}
 a:active { text-decoration: underline; color: #404132;}
 
+image{
+    padding-top: 100%;
+    display: block;
+
+}
 .row {
     margin: 10px -16px; 
 }
@@ -42,6 +47,7 @@ a:active { text-decoration: underline; color: #404132;}
     float: left;
     width: 300px;
     display: none; 
+    /* margin-bottom: 100px; */
 }
 
 /* Clear floats after rows */ 
