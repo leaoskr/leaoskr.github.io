@@ -8,20 +8,36 @@
     align-items: start;
 }
 
-.row > .column {
-padding: 0 8px;
+.row1 > .column1 {
+padding: 0 20px;
 }
 
-.row:after {
+.row1:after {
 content: "";
 display: flex;
 clear: both;
 }
 
 /* width decide how many items in a row */
-.column {
+.column1 {
 float: left;
-width: 33.3%; 
+width: 50%; 
+}
+
+.row2 > .column2 {
+padding: 20px 20px;
+}
+
+.row2:after {
+content: "";
+display: flex;
+clear: both;
+}
+
+/* width decide how many items in a row */
+.column2 {
+float: left;
+width: 50%; 
 }
 
 /* The Modal (background) */
@@ -44,8 +60,8 @@ position: relative;
 background-color: #fefefe;
 margin: auto;
 padding: 0;
-width: 90%;
-max-width: 850px;
+width: 80%;
+/* max-width: 850px; */
 }
 
 /* The Close Button */

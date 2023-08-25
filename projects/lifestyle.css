@@ -8,18 +8,34 @@
     align-items: start;
 }
 
-.row > .column {
+.row1 > .column1 {
 padding: 0 8px;
 }
 
-.row:after {
+.row1:after {
 content: "";
 display: flex;
 clear: both;
 }
 
 /* width decide how many items in a row */
-.column {
+.column1 {
+float: left;
+width: 33.3%; 
+}
+
+.row2 > .column2 {
+padding: 50px 8px;
+}
+
+.row2:after {
+content: "";
+display: flex;
+clear: both;
+}
+
+/* width decide how many items in a row */
+.column2 {
 float: left;
 width: 33.3%; 
 }
