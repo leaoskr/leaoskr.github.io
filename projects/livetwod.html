@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="basicstyle.css">
+    <link rel="stylesheet" href="naturestyle.css">
+    <title>Live2D Model - YuQian Shi</title>
+</head>
+<body>
+    <!-- Header Section -->
+    <section id="header">
+        <div class="header container">
+            <div class="nav-bar">
+                <div class="brand">
+                    <a href="../index.html" style="text-decoration: none;"><h1><span>Y</span>uQian(Lea) <span>S</span>hi</h1></a>
+                </div>
+                <div class="nav-list">
+                    <div class="hamburger"><div class="bar"></div></div>
+                    <ul>
+                        <li><a href="../index.html" name="home" data-after="home" style="text-decoration: none;">Home</a></li>
+                        <li><a href="../artproj.html" name="portfolio" data-after="portfolio" style="text-decoration: none;">Portfolio</a></li>
+                        <li><a href="../about.html" name="about" data-after="about" style="text-decoration: none;">About</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- End Header Section -->
+
+    <!-- Project Section -->
+    <section id="project"> 
+        <div class="project container">
+            <div class="row">
+                <video style="width:100%" onclick="openModal();currentSlide(1)" class="hover-shadow cursor" controls loop>
+                    <source src="../images/projects/livetwod/livetwod-video.mp4" type="video/mp4">
+                </video>
+              </div>
+              
+              <div id="myModal" class="modal">
+                <span class="close cursor" onclick="closeModal()">&times;</span>
+                <div class="modal-content">
+              
+                  <div class="mySlides">
+                    <video style="width:100%" controls loop>
+                        <source src="../images/projects/livetwod/livetwod-video.mp4" type="video/mp4">
+                    </video>
+                  </div>
+                  
+                  <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                  <a class="next" onclick="plusSlides(1)">&#10095;</a>
+                </div>
+              </div>
+
+              <div class="info">
+                <p>Title: <i>Live2D Model</i></p>
+                <p>Year: 2018</p>
+                <p>Size: 6”x22”x13”</p>
+                <p>Medium: Clay, paper, wood, and felt</p>
+                <p>Description: Inspired by my favorite book, The Little Prince, written by Antoine de Saint-Exupéry, I created this artwork to show two important stories in The Little Prince. On the left side, it shows when the Little Prince meeting his best friend, the Fox, on Earth. On the right side, it shows the Little Prince walking on his own planet, B612, with the Rose. I wanted to depict the main theme of the book, which is friendship and love, into the three-dimensional art piece.</p>
+                
+              </div>
+
+              <div class="pagecontrol">
+                <a href="../artproj.html">Back to PORTFOLIO GALLERY</a>
+              </div>
+        </div>
+    </section>
+    <!-- End Project Section -->
+
+    <!-- Footer Section -->
+    <section id="footer">
+        <div class="footer container">
+            <div class="brand"><h1><span>Y</span>uQian(Lea) <span>S</span>hi</h1></div>
+            <!-- <div class="brand"><h1>YuQian<span>(Lea)</span> Shi</h1></div> -->
+            <h2>Try More & Learn More</h2>
+            <div class="social-icon">
+                <div class="social-item" name="github" >
+                    <a href="https://github.com/leaoskr"><img src="https://img.icons8.com/dotty/80/000000/github.png"/></a>
+                </div>
+                <div class="social-item" name="linkedin">
+                    <a href="#"><img src="https://img.icons8.com/dotty/80/000000/linkedin.png"/></a>
+                </div>
+                <div class="social-item" name="email">
+                    <a href="#"><img src="https://img.icons8.com/dotty/80/000000/gmail.png"/></a>
+                </div>
+                <div class="social-item" name="instagram">
+                    <a href="#"><img src="https://img.icons8.com/dotty/80/000000/instagram-new.png"/></a>
+                </div>
+
+            </div>
+            <p>Copyright @ 2023 Shi. All rights reserved</p>
+        </div>
+    </section>
+    <!-- End Footer Section -->
+
+    <script src="../app.js"></script>
+    <script src="lightbox.js"></script>
+</body>
+</html>
